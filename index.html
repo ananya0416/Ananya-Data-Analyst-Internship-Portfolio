@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ananya | Data Analytics Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            padding: 16px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #111827, #1e3a8a);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 26px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: #bfdbfe;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            color: #e5e7eb;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 6px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            background: white;
+            color: #1e3a8a;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 45px;
+            color: #111827;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #1e3a8a;
+            font-size: 21px;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+            color: #4b5563;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            font-weight: 600;
+        }
+
+        .reflection {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact a {
+            color: #93c5fd;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0b1120;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">ANANYA</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#reflection">Learning</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <h1>Ananya</h1>
+
+            <h2>Data Analytics Intern</h2>
+
+            <p>
+                ApexPlanet Software Pvt. Ltd. — 60-Days Data Analytics Internship
+            </p>
+
+            <p style="margin-top: 18px;">
+                Exploring data through analysis, visualization, business intelligence,
+                statistical validation, and data storytelling.
+            </p>
+
+            <div class="buttons">
+                <a
+                    class="btn"
+                    href="https://github.com/ananya0416/Ananya-DataAnalyst-Internship-Portfolio"
+                    target="_blank">
+                    View GitHub Portfolio
+                </a>
+
+                <a
+                    class="btn"
+                    href="#projects">
+                    Explore Projects
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="section-title">About My Internship</h2>
+
+        <div class="about">
+
+            <p>
+                This portfolio presents the work completed during my
+                60-Days Data Analytics Internship at ApexPlanet Software Pvt. Ltd.
+            </p>
+
+            <br>
+
+            <p>
+                The internship provided practical experience across the data
+                analytics workflow, including data preparation, exploratory
+                analysis, business intelligence, deep-dive analysis,
+                interactive dashboarding, statistical validation,
+                and data storytelling.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2 class="section-title">Internship Projects</h2>
+
+        <div class="projects">
+
+            <!-- Task 1 -->
+            <div class="card">
+
+                <h3>Task 1 — Data Immersion & Wrangling</h3>
+
+                <p>
+                    Data understanding, profiling, quality assessment,
+                    cleaning, transformation, and preparation of an
+                    analysis-ready dataset.
+                </p>
+
+                <a
+                    href="https://github.com/ananya0416/Task-1-Data-Immersion-and-Wrangling"
+                    target="_blank">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- Task 2 -->
+            <div class="card">
+
+                <h3>Task 2 — EDA & Business Intelligence</h3>
+
+                <p>
+                    Exploratory data analysis, descriptive statistics,
+                    SQL business questions, visualization, multivariate
+                    analysis, and dashboard planning.
+                </p>
+
+                <a
+                    href="https://github.com/ananya0416/task-2-eda-business-intelligence"
+                    target="_blank">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- Task 3 -->
+            <div class="card">
+
+                <h3>Task 3 — Deep-Dive Analysis & Interactive Dashboarding</h3>
+
+                <p>
+                    KPI definition, deep-dive business analysis,
+                    interactive dashboard development, and business
+                    insight generation.
+                </p>
+
+                <a
+                    href="https://github.com/ananya0416/Task-3-Deep-Dive-Analysis-Interactive-Dashboarding"
+                    target="_blank">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- Task 4 -->
+            <div class="card">
+
+                <h3>Task 4 — Data Storytelling & Statistical Validation</h3>
+
+                <p>
+                    Business storytelling, hypothesis testing,
+                    Welch's t-test, p-value interpretation,
+                    confidence intervals, and business recommendations.
+                </p>
+
+                <a
+                    href="https://github.com/ananya0416/Task-4-Data-Storytelling-Statistical-Validation"
+                    target="_blank">
+                    View Project →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">Python</div>
+            <div class="skill">Pandas</div>
+            <div class="skill">NumPy</div>
+            <div class="skill">SciPy</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Excel</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Matplotlib</div>
+            <div class="skill">Jupyter Notebook</div>
+            <div class="skill">Data Cleaning</div>
+            <div class="skill">EDA</div>
+            <div class="skill">Data Visualization</div>
+            <div class="skill">Statistical Analysis</div>
+            <div class="skill">Business Intelligence</div>
+            <div class="skill">Data Storytelling</div>
+            <div class="skill">GitHub</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Learning -->
+    <section id="reflection">
+
+        <h2 class="section-title">Learning & Reflection</h2>
+
+        <div class="reflection">
+
+            <p>
+                This internship helped me understand the complete data
+                analytics lifecycle, from preparing raw data to producing
+                meaningful business insights.
+            </p>
+
+            <br>
+
+            <p>
+                Through the four project tasks, I developed practical
+                experience in data cleaning, exploratory analysis,
+                SQL, visualization, dashboarding, statistical testing,
+                and data storytelling.
+            </p>
+
+            <br>
+
+            <p>
+                The experience also helped me improve my ability to
+                communicate analytical findings clearly and connect
+                technical analysis with business-oriented conclusions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">Connect With Me</h2>
+
+        <p>
+            <a
+                href="https://github.com/ananya0416"
+                target="_blank">
+                GitHub
+            </a>
+
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank">
+                LinkedIn
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        © 2026 Ananya | Data Analytics Internship Portfolio
+
+    </footer>
+
+</body>
+</html>
